@@ -1,9 +1,22 @@
 #forecast {
-    position: absolute;
-    left: -3%;
+    position: absolute center;
+    
+}
+
+/*.card-body {
+    background-color: purple
+    
+}*/
+
+.row {
+    color: black
 }
 
 h1 {
     margin-bottom: 0%;
     background-image: linear-gradient(to bottom, rgb(0, 255, 234), rgb(225, 236, 78) , rgb(27, 31, 77));
+}
+
+body {
+    background-color: rgb(255, 255, 255)
 }

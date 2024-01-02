@@ -1,15 +1,14 @@
 $(document).ready(function () {
-    //search button feature
+    //search button 
     $("#search-button").on("click", function () {
-      //get value in input search-value.
       var searchTerm = $("#search-value").val();
-      //empty input field.
+      //empty input field
       $("#search-value").val("");
       weatherFunction(searchTerm);
       weatherForecast(searchTerm);
     });
   
-    //search button enter key feature. 
+    //search button enter 
     $("#search-button").keypress(function (event) {
       var keycode = (event.keyCode ? event.keyCode : event.which);
       if (keycode === 13) {
@@ -18,14 +17,14 @@ $(document).ready(function () {
       }
     });
   
-    //pull previous searches from local storage
+    //pull local storage
     var history = JSON.parse(localStorage.getItem("history")) || [];
   
     //sets history array search to correct length
     if (history.length > 0) {
       weatherFunction(history[history.length - 1]);
     }
-    //makes a row for each element in history array(searchTerms)
+   
     for (var i = 0; i < history.length; i++) {
       createRow(history[i]);
     }
@@ -36,7 +35,7 @@ $(document).ready(function () {
       $(".history").append(listItem);
     }
   
-    //listener for list item on click function
+    
     $(".history").on("click", "li", function () {
       weatherFunction($(this).text());
       weatherForecast($(this).text());
@@ -48,6 +47,11 @@ $(document).ready(function () {
         type: "GET",
         url: "https://api.openweathermap.org/data/2.5/weather?q=" + searchTerm + "&appid=e266aca67d430fa6fd4cca475c0b8a4a",
   
+
+
+
+
+        
   
       }).then(function (data) {
         //if index of search value does not exist
@@ -101,7 +105,11 @@ $(document).ready(function () {
   
         });
   
-        // merge and add to page
+       
+
+
+
+        
         title.append(img);
         cardBody.append(title, temp, humid, wind);
         card.append(cardBody);
@@ -109,7 +117,7 @@ $(document).ready(function () {
         console.log(data);
       });
     }
-    // function weatherForecast(searchTerm) 
+    
     function weatherForecast(searchTerm) {
       $.ajax({
         type: "GET",
