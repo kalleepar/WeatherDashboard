@@ -22,7 +22,7 @@ No installation necessary!
 ![Alt text](https://github.com/kalleepar/WeatherDashboard/blob/865e2046e2a592262c533eac8eb376addf3f0c10/images/weatherdemo3.jpg)
 
 ## Link to website!
-https://kalleepar.github.io/password-generator/
+https://kalleepar.github.io/WeatherDashboard/
 
 ## Credits
 
